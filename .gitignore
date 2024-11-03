@@ -1,0 +1,21 @@
+## dbt
+.user.yml
+dbt_packages/
+target*/
+logs/
+.idea/
+seeds/tmp/*
+package-lock.yml
+
+## env files
+.env*
+.dbt*
+.dbt/*
+
+## Virtual envs
+venv
+.venv
+
+## System and IDEs
+.vscode
+.DS_Store
