@@ -92,6 +92,28 @@ When logging in, you will want to switch from the `PUBLIC` role to `ROLE<x>` to 
 
 Please use the `TEST_WH` warehouse for all SQL operations.
 
+You can use the following `profiles.yml` as a template (official documentation [here](https://docs.getdbt.com/docs/core/connect-data-platform/snowflake-setup)):
+
+```yaml
+pd_saw_technical_challenge:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: [account id]
+
+      # User/password auth
+      user: [username]
+      password: [password]
+
+      role: [user role]
+      database: [database name]
+      warehouse: [warehouse name]
+      schema: [dbt schema]
+      threads: [1 or more]
+      client_session_keep_alive: False
+```
+
 The `event_clean` table can be found in `DB<x>.ANALYTICS`. Please create all of the above tables in the same database and schema.
 
 If you have any questions about access or permissions, please contact the recruiter.
@@ -100,6 +122,11 @@ Good luck! Please do not spend more than about two hours total on this assignmen
 
 
 ## Local Environment Setup
+
+Pre-requisites:
+- Python 3.8+ 
+  - We recommend using a package manager to manage python versions (e.g. `brew`)
+- If on Windows, use WSL2 or a Linux VM
 
 1. Create virtual environment
     - `python3 -m venv .venv`
