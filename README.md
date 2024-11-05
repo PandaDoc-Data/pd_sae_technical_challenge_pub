@@ -95,7 +95,7 @@ Please use the `TEST_WH` warehouse for all SQL operations.
 You can use the following `profiles.yml` as a template (official documentation [here](https://docs.getdbt.com/docs/core/connect-data-platform/snowflake-setup)):
 
 ```yaml
-pd_saw_technical_challenge:
+pd_sae_technical_challenge:
   target: dev
   outputs:
     dev:
