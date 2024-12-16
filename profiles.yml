@@ -1,0 +1,26 @@
+pd_sae_technical_challenge:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: gbivbgn-pdtest3
+      user: TEST8
+      password: 2ZEzF7Lqfpcw
+      role: ROLE8         
+      database: DB8   
+      warehouse: TEST8_WH
+      schema: DEV_SABRINA_HU
+      threads: 1
+      client_session_keep_alive: False
+
+    prod:
+      type: snowflake
+      account: gbivbgn-pdtest3
+      user: TEST8
+      password: 2ZEzF7Lqfpcw
+      role: ROLE8
+      database: DB8   
+      warehouse: TEST8_WH
+      schema: ANALYTICS    # Production schema
+      threads: 1
+      client_session_keep_alive: False

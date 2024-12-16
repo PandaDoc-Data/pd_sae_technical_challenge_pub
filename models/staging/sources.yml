@@ -1,0 +1,4 @@
+sources:
+  - name: analytics
+    tables:
+      - name: event_clean
